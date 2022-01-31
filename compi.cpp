@@ -139,4 +139,46 @@ int main()
     // pairs
     pair<int, int> pr = {1, 2};
     // we acess it by using,, pr.first and pr.second;
+    multimap<int, int> mpp;
+    //keys won't be unique, but it would always store in sorted order
+    // same functions as map.
+
+    // Stack -> Last in first out data structure.
+    stack<int> st;
+    st.emplace(10);
+    st.emplace(20);
+    // functions
+    // pop(),top(),size(),empty(),push() and emplace(),
+    st.top();   //returns the first element of stack
+    st.pop();   // deletes the last element pushed in array.
+    st.empty(); // returns a bool wehter a stack is empty or not.
+    // there does not exist a clear function in stack, we need to use while loop to clear the stack.
+    // always have a check to print st.top()
+
+    //Queue
+    // push(), front(), pop(),size(), empty()
+    // all the operations are o(1) , except pop(),
+    queue<int> q;
+    // always have a check for using q.pop()
+
+    //there is not iterator in stack and queue.
+
+    //priority queue
+    //push(),size(),top(),pop(),empty()
+    // keeps all the element in descending order.
+    // performs all the operations of unordered_set but time complexity is log(n)
+    //if we store pair in queue, it will sort according to first one, if equal according to the second one.
+    // to store elements in ascending order in pq. while inserting store them with a negative sign
+    // after that while printing print with -1 multiplied.
+    //duplicates are obviously allowed.
+    // defining minimum priority queue.
+
+    priority_queue<int, vector<int>, greater<int>> > pq;
+
+    //dequeue
+    //functions push_front(), push_back(), pop_front(), push_back(),begin(),end(),rbegin(),rend(),pop_front(),pop_back
+    // size,clear,empty,at
+    // list
+    list<int> ls;
+    // push_front, remove -> removes in O(1) time.
 };
