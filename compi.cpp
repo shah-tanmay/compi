@@ -181,4 +181,54 @@ int main()
     // list
     list<int> ls;
     // push_front, remove -> removes in O(1) time.
+
+    bitset<int> bt;
+    //takes only 1 bit;
+    //fucntions
+    // all,any ,count,flip,none,set,reset,size.
+    // all returns true when all are set to 1.
+    // any returns true when any are set to 1.
+    // flip flips from 0 to 1 and viceversa.
+    // set sets the bit to 1, given the iterator in the function, or the position.
+    // bt.set(2,0)/ sets the 2 index to 0.
+    // reset sets the bit to 0 of all the index.
+    // counet returns the number of bits set to 1.
+    // none, if none is set, then true.
+    // size gives the size of the bitset.
+
+    sort(arr, arr + n); //sorts the array in ascending order. takes time nlog(n)
+    sort(vec.begin(), vec.end());
+
+    // reverse
+    reverse(startIterator, endIterator);
+
+    // max_element,min_element.
+    int el = *max_element(startIterator, endIterator);
+    int el1 = *min_element(startIterator, endIterator);
+
+    // accumulate -> returns the sum in the given range.
+    // last argument is the starting sum.
+    accumulate(startIterator, endIterator, 0);
+
+    // count
+    count(startIterator, endIterator, key);
+
+    //find,returns an iterator.
+    find(startIterator, endIterator, key);
+    // to get the index we minuse it from vec.begin()
+
+    // binary_serach(startIterator, endIterator,key) only works on sorted array.
+    // returns the boolean
+
+    // lower_bound
+    // time complexity is log(n)
+    // works only in sorted array
+    // returns the pointer to the element which is not less then x.
+    auto it = lower_bound(startIterator, endIterator, key);
+
+    //upper_bound
+    // time complexity is
+    // works only in sorted array.
+    //  returns the pointer to the element which is just greater than x.
+    auto it = upper_bound(startIterator, endIterator, key);
 };
