@@ -80,4 +80,63 @@ int main()
         };
         cout << endl;
     }
+
+    // define m*n array;
+    int m = 10;
+    int n = 20;
+    vector<vector<int>> vect(m, vector<int>(n, 0));
+
+    set<int> st; //only containes unique values.
+    //elements of the set are always in sorted order.
+    for (int i = 0; i < st.size(); i++)
+    {
+        st.insert(i); //takse log(n) time.
+    }
+    st.erase(st.begin());           // erase the element of on that particular function.
+    st.erase(st.begin(), st.end()); // deletes all the elements inclusive of first pointer to exclusive of the
+    // last pointer.
+    st.erase(key); //deletes the key at that position.
+    // takes log (n) time.
+    auto it = st.find(3); //returns the iterator where 3 is present, if not present, if returns the end() iterator.
+    st.emplace(10);       //faster than insert.
+    st.size();            // returns the size of the set.
+
+    //unordered_set
+    unordered_set<int> st;
+    // all the operations are simiilar, but time complexity is constant in nature, but we don't know the order of
+    // the elements.
+    // make sure we use unordered_set rather than ordered set.
+
+    //multiset
+    multiset<int> ms;
+    // helps to store element in sorted order, but thery are not unique.
+    // if we use erase a particular key, it will erase all of them.
+    ms.find(2);  // returns the iterator finding to the fist 2.
+    ms.clear();  // it clears the whole array of set.
+    ms.count(2); //returns the number of times that element occurs..
+
+    // map
+    // log(n) is the complexity for the map.
+    map<string, int> mpp; //like objects in js.
+    // map only stores unique value of keys.
+    mpp.emplace("tanmay", 1);
+    mpp.erase('tanmay'); //deletes the given key.
+    mpp.clear();         //clears the entire map.
+    mpp.empty();         // gives a boolean if the map is empty or not.
+    //printing the map
+    for (auto it : mpp)
+    {
+        cout << it.first << it.second;
+    }
+    for (auto it = mpp.begin(); it != mpp.end(); it++)
+    {
+        cout << it->first << it->second;
+    }
+
+    //unordered_map, o(1) in all cases, but in worst case it is o(n);
+    // does not follow any order.
+
+    // pairs
+    pair<int, int> pr = {1, 2};
+    // we acess it by using,, pr.first and pr.second;
 };
