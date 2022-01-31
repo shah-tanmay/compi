@@ -231,4 +231,12 @@ int main()
     // works only in sorted array.
     //  returns the pointer to the element which is just greater than x.
     auto it = upper_bound(startIterator, endIterator, key);
+
+    // next_permutation , returns true, if there is next_permutation and changes the string or the number
+    // it changes the original value.
+
+    // sort function also works on string.
+    // samee way prev_permutation works but in completely reverse order.
+    // we can always give comp to the sort function who's return type is boolean, and it will sort according
+    // to the given comp function.
 };
